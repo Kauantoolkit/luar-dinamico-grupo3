@@ -1,0 +1,20 @@
+[
+  {
+    "fields": [
+      {
+        "name": "fullName",
+        "type": "string",
+        "title": "Full name"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "portrait",
+        "type": "image"
+      }
+    ],
+    "name": "person",
+    "type": "document"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "createdAt": "2024-10-22T20:14:59.088Z",
+  "workspaces": [
+    {
+      "name": "default",
+      "title": "Luar",
+      "basePath": "/",
+      "dataset": "production",
+      "schema": "e25e8ab7.create-schema.json"
+    }
+  ]
+}
