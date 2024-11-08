@@ -1,0 +1,16 @@
+
+export default {
+  name: 'productsShowcase',
+  title: 'Algunsdosnossosprodutos',
+  type: 'document',
+  fields: [
+    {
+      name: 'image',
+      title: 'Imagem do Produto',
+      type: 'image',
+      options: {
+        hotspot: true, // Permite ajustar o ponto focal da imagem
+      },
+    },
+  ],
+};
