@@ -1,0 +1,29 @@
+// productWithRating.js
+export default {
+  name: 'productWithRating',
+  title: 'maisvendidos',
+  type: 'document',
+  fields: [
+    {
+      name: 'image',
+      title: 'Imagem do Produto',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'title',
+      title: 'Título do Produto',
+      type: 'string',
+      description: 'Este campo representa o título do produto e será exibido como um <h4>.',
+    },
+    {
+      name: 'rating',
+      title: 'Avaliação',
+      type: 'number',
+      validation: Rule => Rule.required().min(1).max(10),
+      description: 'Avaliação do produto, de 1 a 10.',
+    },
+  ],
+};

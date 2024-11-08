@@ -9,6 +9,7 @@ export default defineConfig({
 
   projectId: '2yrpcu57',
   dataset: 'lunar',
+  studioHost: 'luar334543',
 
   plugins: [structureTool(), visionTool()],
 

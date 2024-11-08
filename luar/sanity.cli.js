@@ -3,7 +3,8 @@ import {defineCliConfig} from 'sanity/cli'
 export default defineCliConfig({
   api: {
     projectId: '2yrpcu57',
-    dataset: 'lunar'
+    dataset: 'lunar',
+    studioHost: 'luar334543'
   },
   /**
    * Enable auto-updates for studios.

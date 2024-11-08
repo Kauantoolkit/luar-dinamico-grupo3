@@ -1,0 +1,28 @@
+// novaLinha.js
+export default {
+  name: 'nova_linha',
+  title: 'Nova Linha',
+  type: 'document',
+  fields: [
+    {
+      name: 'image',
+      title: 'Imagem de Destaque',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'title',
+      title: 'Título',
+      type: 'string',
+      description: 'Título da nova linha ou coleção.',
+    },
+    {
+      name: 'description',
+      title: 'Descrição',
+      type: 'text',
+      description: 'Descrição detalhada da nova linha ou coleção.',
+    },
+  ],
+};
