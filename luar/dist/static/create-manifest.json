@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "createdAt": "2024-10-22T20:14:59.088Z",
+  "createdAt": "2024-11-08T17:40:25.373Z",
   "workspaces": [
     {
       "name": "default",
       "title": "Luar",
       "basePath": "/",
-      "dataset": "production",
+      "dataset": "lunar",
       "schema": "e25e8ab7.create-schema.json"
     }
   ]

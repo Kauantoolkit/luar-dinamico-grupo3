@@ -1,0 +1,13 @@
+
+export default {
+  name: 'linkwhats',
+  title: 'Linkwhats',
+  type: 'document',
+  fields: [
+    {
+      name: 'url',
+      title: 'URL',
+      type: 'url',
+    }
+  ]
+};

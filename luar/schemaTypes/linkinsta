@@ -1,0 +1,12 @@
+export default {
+  name: 'linkinsta',
+  title: 'Linkinsta',
+  type: 'document',
+  fields: [
+    {
+      name: 'url',
+      title: 'URL',
+      type: 'url',
+    }
+  ]
+};

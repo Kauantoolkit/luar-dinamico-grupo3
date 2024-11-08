@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'Luar',
 
   projectId: '2yrpcu57',
-  dataset: 'production',
+  dataset: 'lunar',
 
   plugins: [structureTool(), visionTool()],
 
