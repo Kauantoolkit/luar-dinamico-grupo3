@@ -1,0 +1,17 @@
+// categoria.js
+export default {
+  name: 'categoria',
+  title: 'Categoria',
+  type: 'document',
+  fields: [
+    {
+      name: 'imagem',
+      title: 'Imagem da Categoria',
+      type: 'image',
+      options: {
+        hotspot: true, // Permite ajustar o foco da imagem
+      },
+      description: 'Adicione uma imagem representativa para esta categoria.',
+    },
+  ],
+};

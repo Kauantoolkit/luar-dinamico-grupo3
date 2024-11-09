@@ -1,0 +1,29 @@
+
+export default {
+  name: 'sobreNos',
+  title: 'Sobre Nós',
+  type: 'document',
+  fields: [
+    
+    {
+      name: 'paragraph',
+      title: 'Parágrafo acima do titulo',
+      type: 'string',
+      description: 'Um parágrafo breve para introdução.',
+    },
+    
+    {
+      name: 'title',
+      title: 'Título',
+      type: 'string',
+      description: 'Título principal para a seção, será exibido como <h1>.',
+    },
+    
+    {
+      name: 'additionalText',
+      title: 'textao',
+      type: 'text',
+      description: 'Texto adicional detalhando a seção "Sobre Nós".',
+    },
+  ],
+};
