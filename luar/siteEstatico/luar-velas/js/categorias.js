@@ -22,20 +22,20 @@ window.addEventListener("load", async function () {
 
             const imgUrl = json.result[index].imagem?.asset?.url;
             if (imgUrl) {
-                // Criar a div com as configurações
+                
                 const div = document.createElement("div");
                 div.classList.add("col-3", "cursor-pointer");
                 div.setAttribute("onclick", "link('/produto.html')");
 
-                // Criar a imagem
+                
                 const img = document.createElement("img");
                 img.classList.add("fotos_descaralhadas")
                 img.src = imgUrl;
 
-                // Inserir a imagem na div
+                
                 div.appendChild(img);
 
-                // Adicionar a div ao container
+                
                 if (categoriaContainer) {
                     categoriaContainer.appendChild(div);
                     console.log("Div com imagem adicionada");
