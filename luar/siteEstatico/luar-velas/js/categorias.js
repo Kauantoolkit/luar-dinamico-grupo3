@@ -29,7 +29,7 @@ window.addEventListener("load", async function () {
 
                 
                 const img = document.createElement("img");
-                img.classList.add("fotos_descaralhadas")
+                img.classList.add("fotos_casualmente_fora_do_tamanho_certo")
                 img.src = imgUrl;
 
                 

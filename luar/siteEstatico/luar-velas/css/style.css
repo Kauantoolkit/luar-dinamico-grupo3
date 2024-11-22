@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-.fotos_descaralhadas{
+.fotos_casualmente_fora_do_tamanho_certo{
     width: 100%;
     height: 100%;
 }
@@ -67,9 +67,10 @@ p {
 
 .row {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-radius: 50px;
+
 }
 
 .col-2 {
@@ -133,8 +134,10 @@ p {
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
-    margin-bottom: 50px;
+    max-height: 400px;
     transition: transform 0.5s;
+    height: 100%;
+    width: 100%;
 }
 
 .col-4 img {
@@ -336,6 +339,13 @@ p.copyright {
 .row-2 {
     justify-content: space-between;
     margin: 100px auto 50px;
+}
+
+
+.to_ficando_maluco_com_oq_fizeram_nesse_site{
+    display: block;
+    width: 100%;
+    height: 120%;
 }
 
 select {
