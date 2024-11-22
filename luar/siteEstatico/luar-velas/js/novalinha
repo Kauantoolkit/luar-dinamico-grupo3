@@ -1,0 +1,91 @@
+const BANNER_URL = "https://2yrpcu57.api.sanity.io/v2022-03-07/data/query/lunar?query=*%5B_type+%3D%3D+%22nova_linha%22%5D%7B%0A++title%2C%0A++description%2C%0A++image%7Basset-%3E%7Burl%7D%7D%0A%7D%0A%0A&perspective=published";
+
+window.addEventListener("load", async function () {
+    console.log("Página carregada");
+
+    try {
+        const resultado = await fetch(BANNER_URL, { method: "GET" });
+
+        if (!resultado.ok) {
+            throw new Error("Erro ao buscar dados do banner: " + resultado.statusText);
+        }
+
+        const json = await resultado.json();
+        console.log("Dados carregados:", json);
+
+        const bannerContainer = document.querySelector("body > main > div.offer > div > div"); // Ajuste o seletor se necessário
+
+        if (!bannerContainer) {
+            console.error("Container do banner não encontrado!");
+            return;
+        }
+
+        for (let i = 0; i < json.result.length; i++) {
+            console.log("entrou no looping");
+            const banner = json.result[i];
+            const title = banner.title;
+            const description = banner.description;
+            const bannerImgUrl = banner.image?.asset?.url;
+
+            console.log('Title:', title);
+            console.log('Description:', description);
+            console.log('Banner Image URL:', bannerImgUrl);
+            console.log(json.result);
+
+            if (title && description && bannerImgUrl) {
+                // Criar a estrutura do banner
+                console.log("os dados bateram");
+                const rowDiv = document.createElement("div");
+                rowDiv.classList.add("row");
+
+                // Coluna 1 - Imagem do banner (classe 'col-2' mantém a classe original)
+                const col1 = document.createElement("div");
+                col1.classList.add("col-2");
+
+                const img = document.createElement("img");
+                img.src = bannerImgUrl;
+                img.classList.add("offer-img", "sc-1120");
+
+                col1.appendChild(img);
+
+                // Coluna 2 - Título, Descrição e Botão (sem margem, com quebra de linha)
+                const col2 = document.createElement("div");
+                col2.classList.add("col-2");
+
+                const p = document.createElement("p");
+                p.textContent = "Nova linha!";
+
+                const h1 = document.createElement("h1");
+                h1.classList.add("sc-420:!text-[27px]");
+                h1.textContent = title;
+
+                const small = document.createElement("small");
+                small.textContent = description;
+
+                // Quebra de linha antes do botão
+                const breakLine = document.createElement("br");
+
+                const link = document.createElement("a");
+                link.classList.add("btn", "cursor-pointer", "hover:!text-[white]");
+                link.textContent = "Compre Agora! →";
+                link.setAttribute("href", "#"); // Link para mais informações, ajuste conforme necessário
+
+                // Adicionar os elementos dentro de col2
+                col2.appendChild(p);
+                col2.appendChild(h1);
+                col2.appendChild(small);
+                col2.appendChild(breakLine);  // Adiciona a quebra de linha
+                col2.appendChild(link);  // Adiciona o botão
+
+                // Adicionar as duas colunas à linha
+                rowDiv.appendChild(col1); // Coluna com a imagem
+                rowDiv.appendChild(col2); // Coluna com o restante
+
+                bannerContainer.appendChild(rowDiv);
+                console.log("Banner adicionado.");
+            }
+        }
+    } catch (error) {
+        console.error("Erro ao carregar o banner:", error);
+    }
+});
