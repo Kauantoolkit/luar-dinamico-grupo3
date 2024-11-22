@@ -9,7 +9,7 @@ export default {
       title: 'Imagem da Categoria',
       type: 'image',
       options: {
-        hotspot: true, // Permite ajustar o foco da imagem
+        hotspot: true, 
       },
       description: 'Adicione uma imagem representativa para esta categoria.',
     },
